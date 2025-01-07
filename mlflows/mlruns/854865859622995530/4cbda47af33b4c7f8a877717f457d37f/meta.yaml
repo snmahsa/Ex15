@@ -1,0 +1,15 @@
+artifact_uri: file:///home/snmahsa/Projects/Ex15/Ex15/mlflows/mlruns/854865859622995530/4cbda47af33b4c7f8a877717f457d37f/artifacts
+end_time: 1736265440590
+entry_point_name: ''
+experiment_id: '854865859622995530'
+lifecycle_stage: active
+run_id: 4cbda47af33b4c7f8a877717f457d37f
+run_name: run_size0.3n5
+run_uuid: 4cbda47af33b4c7f8a877717f457d37f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736265436888
+status: 3
+tags: []
+user_id: snmahsa

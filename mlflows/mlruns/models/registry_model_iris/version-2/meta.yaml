@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1736267844840
+current_stage: Production
+description: null
+last_updated_timestamp: 1736267963253
+name: registry_model_iris
+run_id: model_uri_2
+run_link: null
+source: model_uri_2/KNN
+status: READY
+status_message: null
+storage_location: model_uri_2/KNN
+user_id: null
+version: 2

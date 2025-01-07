@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1736267506231
+current_stage: None
+description: null
+last_updated_timestamp: 1736267506231
+name: registry_model_iris
+run_id: ba5c55f969554753b0bda74176ad1256
+run_link: null
+source: file:///home/snmahsa/Projects/Ex15/Ex15/mlflows/mlruns/854865859622995530/ba5c55f969554753b0bda74176ad1256/artifacts/KNN
+status: READY
+status_message: null
+storage_location: file:///home/snmahsa/Projects/Ex15/Ex15/mlflows/mlruns/854865859622995530/ba5c55f969554753b0bda74176ad1256/artifacts/KNN
+user_id: null
+version: 1
