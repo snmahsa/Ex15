@@ -1,0 +1,13 @@
+{% include 'base.html' %}
+<div class="container mt-5">
+    <div class="text-center">
+        <div class="row align-items-center bg-light p-3 rounded">
+            <div class="col-md-8">
+                <img src="{{ url_for('static', filename=image_link) }}" class="img-fluid" alt="Image">
+            </div>
+            <div class="col-md-4">
+                <span>Your predict is:</span><h4 class="predicted-class"> {{ predicted_class }}</h4>
+            </div>
+        </div>
+    </div>
+</div>

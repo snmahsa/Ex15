@@ -1,0 +1,49 @@
+{% include 'base.html' %}
+{%block content%}
+    <div class="container mt-5">
+        <h2>My Input History</h2>
+        
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="alert alert-info">
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        
+        <table class="table table-bordered table-striped">
+            <thead class="table-primary">
+                <tr>
+                    <th>ID</th>
+                    <th>Result Code</th>
+                    <th>Result</th>
+                    <th>Sepal Length</th>
+                    <th>Sepal Width</th>
+                    <th>Petal length</th>
+                    <th>Petal Width</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if inputs %}
+                    {% for input in inputs %}
+                    <tr>
+                        <td>{{ input.id }}</td>
+                        <td>{{ input.result_code }}</td>
+                        <td>{{ input.result }}</td>
+                        <td>{{ input.sepal_length }}</td>
+                        <td>{{ input.sepal_width }}</td>
+                        <td>{{ input.petal_length }}</td>
+                        <td>{{ input.petal_width }}</td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="12" class="text-center">No inputs found.</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+{%endblock%}

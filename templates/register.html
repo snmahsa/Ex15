@@ -1,0 +1,49 @@
+{% include 'base.html' %}
+
+{%block content%}
+<div class="container">
+    {% with  messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div>
+        {% for category, message in messages %}
+            <div class="alert alert-{{category}} alert-dismissiable fade show" role="alert">
+                {{message}}
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+    <form action="{{url_for('register')}}" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <div>
+            <h1 class="text-center">Registeration</h1>
+        </div>
+        <div class="form-group">
+            {{form.username.label}}
+            {{form.username(class="form-control",placeholder='Enter a username')}}
+            {%for error in form.username.errors%}
+                {{error}}
+            {%endfor%}
+        </div>
+        <div class="form-group">
+            {{form.password.label}}
+            {{form.password(class="form-control",placeholder='Enter a password')}}
+            {%for error in form.password.errors%}
+            {{error}}
+        {%endfor%}
+        </div>
+        <div class="form-group">
+            {{form.confirm_password.label}}
+            {{form.confirm_password(class="form-control",placeholder='Conform  a password')}}
+            {%for error in form.confirm_password.errors%}
+            {{error}}
+        {%endfor%}
+        </div>
+        <div class="form-group mt-5">
+            {{form.submit(class="btn btn-success")}}
+        </div>
+    </form>
+
+</div>
+
+{%endblock%}

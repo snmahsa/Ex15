@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1736269309887
+current_stage: Production
+description: null
+last_updated_timestamp: 1736269335662
+name: registry_model
+run_id: 0b25b7fc60574185b51ebf3594b53596
+run_link: null
+source: 0b25b7fc60574185b51ebf3594b53596/KNN
+status: READY
+status_message: null
+storage_location: 0b25b7fc60574185b51ebf3594b53596/KNN
+user_id: null
+version: 2

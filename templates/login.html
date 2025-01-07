@@ -1,0 +1,43 @@
+{% include 'base.html' %}
+
+{%block content%}
+<div class="container mt-5">
+    {% with  messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div>
+        {% for category, message in messages %}
+            <div class="alert alert-{{category}} alert-dismissiable fade show" role="alert">
+                {{message}}
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+    <form action="{{url_for('login')}}" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <div>
+            <h1 class="text-center">Login</h1>
+        </div>
+        <div class="form-group">
+            {{form.username_login.label}}
+            {{form.username_login(class="form-control",placeholder='Enter a username')}}
+            {%for error in form.username_login.errors%}
+                {{error}}
+            {%endfor%}
+        </div>
+        <div class="form-group">
+            {{form.password_login.label}}
+            {{form.password_login(class="form-control",placeholder='Enter a password')}}
+            {%for error in form.password_login.errors%}
+            {{error}}
+        {%endfor%}
+        </div>
+
+        <div class="form-group mt-5">
+            {{form.login(class="btn btn-success")}}
+        </div>
+    </form>
+
+</div>
+
+{%endblock%}

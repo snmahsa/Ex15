@@ -1,0 +1,30 @@
+name : Python Flask pipline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      
+      - name: Install Python
+        uses: actions/setup-python@v4
+
+      - name: Install Requirements
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r Requirements.txt 
+      
+      - name: test
+        run: |
+          PYTHONPATH=. pytest tests/
+
+

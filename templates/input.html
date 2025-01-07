@@ -1,0 +1,51 @@
+{% include 'base.html' %}
+
+{%block content%}
+<div class="container">
+    <div>
+        
+    </div>
+    <form action="{{url_for('predict')}}" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <div>
+            <h1 class="text-center">Prediction</h1>
+        </div>
+        <div class="form-group">
+            {{form.sepal_length.label}}
+            {{form.sepal_length(class="form-control")}}
+            {%for error in form.sepal_length.errors%}
+                {{error}}
+            {%endfor%}
+        </div>
+        <div class="form-group">
+            {{form.sepal_width.label}}
+            {{form.sepal_width(class="form-control")}}
+            {%for error in form.sepal_width	.errors%}
+            {{error}}
+        {%endfor%}
+        </div>
+        <div class="form-group">
+            {{form.petal_length.label}}
+            {{form.petal_length(class="form-control")}}
+            {%for error in form.petal_length.errors%}
+            {{error}}
+        {%endfor%}
+        </div>
+
+        <div class="form-group">
+            {{form.petal_width.label}}
+            {{form.petal_width(class="form-control")}}
+            {%for error in form.petal_width	.errors%}
+            {{error}}
+        {%endfor%}
+        </div>
+
+
+        <div class="form-group mt-5 mb-5">
+            {{form.send(class="btn btn-success")}}
+        </div>
+    </form>
+
+</div>
+
+{%endblock%}

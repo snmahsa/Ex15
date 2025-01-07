@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+
+  web:
+    image: helex
+    build: 
+      context: .
+    ports:
+      - "5000:5000"
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - ./instance:/app/instance
+    depends_on:
+      - redis
+
+  redis:
+    image: "redis:alpine"

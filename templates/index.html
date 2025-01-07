@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    <div class="text-center mb-4">
+        <h1 class="display-4">Welcome to the Iris Prediction System!</h1>
+        <p class="lead">Discover the beauty of Iris flowers and predict their species based on their features.</p>
+        <a href="{{ url_for('input') }}" class="btn btn-primary btn-lg">Start Prediction</a>
+    </div>
+
+    <div class="row align-items-center mb-5 mt-5"> <!-- اضافه کردن mt-5 برای فاصله بیشتر -->
+        <div class="col-md-6">
+            <h2>About Iris Flowers</h2>
+            <p>
+                Iris flowers are renowned for their stunning beauty and diversity. With over 300 species and numerous hybrids, 
+                they come in a variety of colors and shapes, making them a favorite among gardeners and nature lovers.
+            </p>
+            <p>
+                Their unique features, such as the shape of their petals and the length of their stems, allow us to classify them into different species.
+                In this system, you can input the characteristics of an iris flower, and we will predict its species for you!
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/iris.jpeg') }}" class="img-fluid rounded shadow" alt="Iris Flower">
+        </div>
+    </div>
+
+    <div class="mt-5 mb-5 text-center">
+        <h3 class="mb-4">Why Use Our Prediction System?</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Easy to Use</h5>
+                        <p class="card-text">Simply enter the features of the flower and get instant predictions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Accurate Predictions</h5>
+                        <p class="card-text">Our model is trained to provide accurate species predictions based on input data.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Learn About Iris</h5>
+                        <p class="card-text">Explore the fascinating world of Iris flowers through our system.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Section: Features of Iris Flowers -->
+    <div class="mt-5">
+        <h2 class="text-center mb-3">Features of Iris Flowers</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='img/iris_features.png') }}" class="img-fluid rounded" alt="Iris Features">
+            </div>
+            <div class="col-md-6">
+                <ul class="list-unstyled">
+                    <li>
+                        <h5>Sepal Length</h5>
+                        <p>The length of the sepal (the outer part of the flower).</p>
+                    </li>
+                    <li>
+                        <h5>Sepal Width</h5>
+                        <p>The width of the sepal.</p>
+                    </li>
+                    <li>
+                        <h5>Petal Length</h5>
+                        <p>The length of the petal (the inner part of the flower).</p>
+                    </li>
+                    <li>
+                        <h5>Petal Width</h5>
+                        <p>The width of the petal.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
